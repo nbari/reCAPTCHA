@@ -1,0 +1,32 @@
+{{ template "templates/header.html" . }}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-6">
+            <form action="/post" method="post">
+                <fieldset>
+                    <legend>Login form</legend>
+                    <div class="input-group fluid">
+                        <label for="username" style="width: 80px;">Username</label>
+                        <input type="text" value="" name="username" id="username" placeholder="username">
+                    </div>
+                    <div class="input-group fluid">
+                        <label for="password" style="width: 80px;">Password</label>
+                        <input type="password" value="" name="password" id="password" placeholder="password">
+                    </div>
+                    <div class="input-group fluid">
+                        <button class="primary">Login</button>
+                        <div class="g-recaptcha" data-sitekey="6LewHyAUAAAAAKlKkdvZHyiKiwTZpjMRhMTif_SK"></div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-sm">
+        </div>
+    </div>
+
+</div>
+
+{{ template "templates/footer.html" . }}

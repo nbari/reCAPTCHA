@@ -1,0 +1,39 @@
+{{ template "templates/header.html" . }}
+
+<table>
+    <caption>reCAPTCHA test</caption>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>URL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Type">reCAPTCHA version 2</td>
+            <td data-label="URL"><a href="/v2">/v2</a></td>
+        </tr>
+        <tr>
+            <td data-label="Type">Invisible reCAPTCHA</td>
+            <td data-label="URL"><a href="/invisible">/inivisible</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>How to test</h3>
+<p>The test only show the recaptha json response no mater what username or password is used.</p>
+<p>The logic of validating the proper user should take place only after the <b>recaptha.success == true</b></p>
+
+
+<pre>
+{
+  "success": true|false,
+  "challenge_ts": timestamp,  // timestamp of the challenge load (ISO format yyyy-MM-dd'T'HH:mm:ssZZ)
+  "hostname": string,         // the hostname of the site where the reCAPTCHA was solved
+  "error-codes": [...]        // optional
+}
+</pre>
+
+More information about how reCaptha works can be found here: <a href="https://developers.google.com/recaptcha/docs/verify">https://developers.google.com/recaptcha/docs/verify</a>
+
+{{ template "templates/footer.html" . }}
