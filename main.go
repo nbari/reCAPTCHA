@@ -76,7 +76,7 @@ func post(w http.ResponseWriter, r *http.Request) {
 
 	invisible := r.FormValue("invisible")
 	if invisible != "" {
-		secret := "-- secret key --"
+		secret = "-- secret key --"
 	}
 
 	postURL := "https://www.google.com/recaptcha/api/siteverify"
